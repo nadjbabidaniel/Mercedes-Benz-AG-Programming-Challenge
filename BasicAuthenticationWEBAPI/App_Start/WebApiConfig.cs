@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BasicAuthenticationWEBAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -10,6 +11,8 @@ namespace BasicAuthenticationWEBAPI
         public static void Register(HttpConfiguration config)
         {
             // Web-API-Konfiguration und -Dienste
+
+            //config.Filters.Add(new BasicAuthenticationAttribute());
 
             // Web-API-Routen
             config.MapHttpAttributeRoutes();
