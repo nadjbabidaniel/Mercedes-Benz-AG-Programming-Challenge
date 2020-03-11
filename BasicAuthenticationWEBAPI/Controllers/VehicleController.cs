@@ -22,7 +22,7 @@ namespace BasicAuthenticationWEBAPI.Controllers
         {
             string username = Thread.CurrentPrincipal.Identity.Name;
 
-            //if (username.ToLower() != "maleuser" || username.ToLower() != "femaleuser") return Request.CreateResponse(HttpStatusCode.BadRequest);
+            if (username.ToLower() != "maleuser" && username.ToLower() != "femaleuser") return Request.CreateResponse(HttpStatusCode.BadRequest);
 
             if (vehiclePush == null) return null;
 

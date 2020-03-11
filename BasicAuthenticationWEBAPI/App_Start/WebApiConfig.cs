@@ -12,7 +12,7 @@ namespace BasicAuthenticationWEBAPI
         {
             // Web-API-Konfiguration und -Dienste
 
-            //config.Filters.Add(new BasicAuthenticationAttribute());
+            config.Filters.Add(new BasicAuthenticationAttribute());
 
             // Web-API-Routen
             config.MapHttpAttributeRoutes();
