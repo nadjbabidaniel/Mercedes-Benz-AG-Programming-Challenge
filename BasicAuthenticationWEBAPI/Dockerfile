@@ -1,6 +1,7 @@
-FROM mcr.microsoft.com/dotnet/framework/sdk:4.7.2 AS build
+FROM mcr.microsoft.com/dotnet/framework/sdk:latest
 WORKDIR /app
-EXPOSE 8080 
+
+EXPOSE 8081 
 
 # copy csproj and restore as distinct layers
 COPY *.sln .
@@ -13,4 +14,3 @@ COPY BasicAuthenticationWEBAPI/. ./BasicAuthenticationWEBAPI/
 WORKDIR /app/BasicAuthenticationWEBAPI
 
 RUN msbuild /p:Configuration=Release
-
