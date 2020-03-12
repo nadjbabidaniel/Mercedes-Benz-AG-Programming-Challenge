@@ -18,6 +18,7 @@ namespace BasicAuthenticationWEBAPI.Controllers
 
         [BasicAuthentication]
         [HttpGet]
+        [Route("v1/Trips/")]
         public async Task<HttpResponseMessage> Trips(VehiclePush vehiclePush)
         {
             string username = Thread.CurrentPrincipal.Identity.Name;
@@ -29,6 +30,7 @@ namespace BasicAuthenticationWEBAPI.Controllers
             VehiclePushAnalysis vehiclePushAnalysis = new VehiclePushAnalysis() { Vin = vehiclePush?.Vin };
             List<VehiclePushDataPoint> dataPoints = vehiclePush.Data;
 
+            //sollte mindestens <2 Elemente haben, denn es ist eine Reise
             if (dataPoints.Count < 1) return null;
 
             var firstDataPoint = dataPoints[0];
@@ -38,9 +40,9 @@ namespace BasicAuthenticationWEBAPI.Controllers
             Response bingResponse = null;
             using (HttpClient client = new HttpClient())
             {
-                string pathOrigin = path + firstDataPoint?.PositionLat.ToString(CultureInfo.InvariantCulture) + "," + firstDataPoint?.PositionLong.ToString(CultureInfo.InvariantCulture) + myKey;
                 try
                 {
+                    string pathOrigin = path + firstDataPoint?.PositionLat.ToString(CultureInfo.InvariantCulture) + "," + firstDataPoint?.PositionLong.ToString(CultureInfo.InvariantCulture) + myKey;
                     HttpResponseMessage response = await client.GetAsync(pathOrigin);
 
                     XmlSerializer serializer = new XmlSerializer(typeof(Response));
@@ -77,7 +79,7 @@ namespace BasicAuthenticationWEBAPI.Controllers
             vehiclePushAnalysis.Consumption = System.Math.Abs( (firstDataPoint.FuelLevel - lastDataPoint.FuelLevel) * 100 / (lastDataPoint.Odometer - firstDataPoint.Odometer));
         }
 
-            int previousFuelLevel = firstDataPoint.FuelLevel;
+        int previousFuelLevel = firstDataPoint.FuelLevel;
         int currentFuelLevel;
         List<Break> RefuelStops = new List<Break>();
         List<Break> Breaks = new List<Break>();
