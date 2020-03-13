@@ -38,5 +38,5 @@ Authentication:
 ![](https://github.com/nadjbabidaniel/BasicAuthenticationWEBAPI/blob/master/Image1.png)
 
 
-Body ruqest:
+Body request:
 ![](https://github.com/nadjbabidaniel/BasicAuthenticationWEBAPI/blob/master/Image2.png)
