@@ -1,7 +1,7 @@
 swagger: “2.0”
 ----
 
-Rest API needs to be triggered with get http request: http://localhost:54728/v1/Trips/
+Rest API needs to be triggered with GET http request: http://localhost:54728/v1/Trips/
 
 Authentication is required with next credentials:
 
