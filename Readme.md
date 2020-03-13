@@ -30,7 +30,7 @@ Example:
         "positionLong": "11.576124"
       }
      ]
-   }
+    }
 
 ----
 I used Postman for that:
