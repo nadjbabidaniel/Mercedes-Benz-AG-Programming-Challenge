@@ -34,6 +34,9 @@ Example:
 ----
 I used Postman for that:
 
+Authentication:
 ![](https://github.com/nadjbabidaniel/BasicAuthenticationWEBAPI/blob/master/Image1.png)
 
+
+Body ruqest:
 ![](https://github.com/nadjbabidaniel/BasicAuthenticationWEBAPI/blob/master/Image2.png)
