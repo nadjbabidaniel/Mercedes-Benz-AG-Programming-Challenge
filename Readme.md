@@ -8,6 +8,7 @@ Authentication is required with next credentials:
  Password = "123456"       or    Password = "abcdef"
 
 and VehiclePush object needs to be sent inside of a request body:
+
 Example:
 
     {
