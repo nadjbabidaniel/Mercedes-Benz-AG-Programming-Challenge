@@ -70,7 +70,7 @@ Expected object to be returned is VehiclePushAnalysis:
     ]
     }
 
-Used external service to determine the city name for depature and destination is Bing Maps
+Used external service to determine the city name for depature and destination is [Bing Maps]: https://www.bingmapsportal.com//
 
 
 
