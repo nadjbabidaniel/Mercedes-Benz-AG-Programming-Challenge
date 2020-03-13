@@ -9,6 +9,7 @@ Authentication is required with next credentials:
 
 and VehiclePush object needs to be sent inside of a request body:
 Example:
+
     {
     "vin": "WDD1671591Z000999",
     "breakThreshold": "1800",
@@ -28,8 +29,8 @@ Example:
         "positionLat": "48.137154",
         "positionLong": "11.576124"
       }
-    ]
-  }
+     ]
+   }
 
 ----
 I used Postman for that:
