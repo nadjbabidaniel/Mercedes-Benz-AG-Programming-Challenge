@@ -44,3 +44,35 @@ Authentication:
 
 Body request:
 ![](https://github.com/nadjbabidaniel/BasicAuthenticationWEBAPI/blob/master/Image2.png)
+
+Expected object to be returned is VehiclePushAnalysis:
+
+    {
+    "Vin": "WDD1671591Z000999",
+    "Departure": "Stuttgart",
+    "Destination": "Munich",
+    "RefuelStops": [
+        {
+            "StartTimestamp": 1559137020,
+            "EndTimestamp": 1559137020,
+            "PositionLat": 48.1371536,
+            "PositionLong": 11.5761242
+        }
+    ],
+    "Consumption": 2.0,
+    "Breaks": [
+        {
+            "StartTimestamp": 1559137020,
+            "EndTimestamp": 1559137020,
+            "PositionLat": 48.77199,
+            "PositionLong": 9.172787
+        }
+    ]
+    }
+
+Used external service to determine the city name for depature and destination is Bing Maps
+
+
+
+
+
