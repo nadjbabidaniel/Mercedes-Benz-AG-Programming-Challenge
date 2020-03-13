@@ -6,8 +6,8 @@ Rest API needs to be triggered with get http request: http://localhost:54728/v1/
 Authentication is required with next credentials:
 
     | UserName:  | Password: |    
-    | MaleUser   | 123456 |
-    | FemaleUser | abcdef |
+    | MaleUser   |  123456   |
+    | FemaleUser |  abcdef   |
 
 and VehiclePush object needs to be sent inside of a request body:
 
