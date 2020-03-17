@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BasicAuthenticationWEBAPI.Tests
 {
     [TestClass]
-    public class TestVehicle
+    public class VehicleTest
     {
         [TestMethod]
         public async Task VehicleNotNull_Test()
