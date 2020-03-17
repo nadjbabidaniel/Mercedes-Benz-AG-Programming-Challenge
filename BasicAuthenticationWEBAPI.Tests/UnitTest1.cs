@@ -12,7 +12,7 @@ namespace BasicAuthenticationWEBAPI.Tests
     public class TestVehicle
     {
         [TestMethod]
-        public async Task VehicleNotNull()
+        public async Task VehicleNotNull_Test()
         {
             VehiclePushDataPoint stuttgartPoint = new VehiclePushDataPoint()
             {
