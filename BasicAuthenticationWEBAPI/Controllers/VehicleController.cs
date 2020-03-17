@@ -23,8 +23,6 @@ namespace BasicAuthenticationWEBAPI.Controllers
         {
             string username = Thread.CurrentPrincipal.Identity.Name;
 
-            if (username.ToLower() != "maleuser" && username.ToLower() != "femaleuser") return Request.CreateResponse(HttpStatusCode.BadRequest);
-
             if (vehiclePush == null) return null;
 
             VehiclePushAnalysis vehiclePushAnalysis = new VehiclePushAnalysis() { Vin = vehiclePush?.Vin };
@@ -102,10 +100,10 @@ namespace BasicAuthenticationWEBAPI.Controllers
                     Breaks.Add(br);
                 }
 
-    previousFuelLevel = currentFuelLevel;
+                previousFuelLevel = currentFuelLevel;
             }
 
-vehiclePushAnalysis.RefuelStops = RefuelStops;
+            vehiclePushAnalysis.RefuelStops = RefuelStops;
             vehiclePushAnalysis.Breaks = Breaks;
 
             return Request.CreateResponse(HttpStatusCode.OK, vehiclePushAnalysis);           
