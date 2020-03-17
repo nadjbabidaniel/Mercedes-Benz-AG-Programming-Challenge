@@ -53,9 +53,9 @@ namespace BasicAuthenticationWEBAPI.Tests
             var response = await controller.Trips(vehiclePush);
 
             // Assert
-            VehiclePushAnalysis pushAnalysis;
-            Assert.IsTrue(response.TryGetContentValue<VehiclePushAnalysis>(out pushAnalysis));
-            Assert.IsNotNull(pushAnalysis);           
+            VehiclePushAnalysis pushResponse;
+            Assert.IsTrue(response.TryGetContentValue(out pushResponse));
+            Assert.IsNotNull(pushResponse);           
         }
     }
 }
