@@ -97,7 +97,10 @@ ________________________________________________________________________________
       * README.md with documentation how to deploy the infrastructure and the application
  
  version: "1.0.0"
+ 
  title: "Mercedes-Benz AG Programming Challenge"
+ 
  basePath: "/v1"
+ 
  tags:
     - name: "Vehicle Trip Analyzer"
