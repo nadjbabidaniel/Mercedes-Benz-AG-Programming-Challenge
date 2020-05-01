@@ -75,8 +75,6 @@ Used external service to determine the city name for departure and destination i
 [id/name]: https://www.bingmapsportal.com/
 
 ___________________________________________________________________________________________________________________________________
-
- info:
  
    description: |
 
