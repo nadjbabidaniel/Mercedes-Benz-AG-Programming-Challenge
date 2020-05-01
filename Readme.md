@@ -76,8 +76,10 @@ Used external service to determine the city name for departure and destination i
 
 ___________________________________________________________________________________________________________________________________
 
-info:
-  description: |
+ info:
+ 
+   description: |
+
     - Implement the specified REST Endpoint
     - Protect the API with BasicAuth
     - Use Docker to run your application
@@ -93,11 +95,16 @@ info:
       * Kubernetes deployment YAML (if Kubernetes is used)
       * Infrastructure automation scripts
       * README.md with documentation how to deploy the infrastructure and the application
-  version: "1.0.0"
-  title: "Mercedes-Benz AG Programming Challenge"
-basePath: "/v1"
-tags:
-- name: "Vehicle Trip Analyzer"
+ 
+ version: "1.0.0"
+ 
+ title: "Mercedes-Benz AG Programming Challenge"
+
+ basePath: "/v1"
+
+ tags:
+
+    - name: "Vehicle Trip Analyzer"
 
 
 
