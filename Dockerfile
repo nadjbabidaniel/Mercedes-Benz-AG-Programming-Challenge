@@ -16,5 +16,7 @@ RUN msbuild /p:Configuration=Release
 
 
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8 AS runtime
-WORKDIR /inetpub/wwwroot
+WORKDIR /app
 COPY --from=build /app/BasicAuthenticationWEBAPI/. ./
+ENTRYPOINT ["BasicAuthenticationWEBAPI.exe"]
+
